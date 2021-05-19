@@ -1,25 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react'
+// import ReactDOM from 'react-dom';
+import { useState } from 'react';
+
 
 function App() {
+  const [count, setCount] = useState(0);
+  if (count === -1){
+    alert('The Basket is empty')
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+        Products
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>
+          <p>{count}</p>
+        </div>
+        <div>
+      <button onClick={() => setCount(count + 1)}>
+      Added to the basket
+      </button>
+    </div>
+    <div>
+      <button onClick={() => setCount(count -1)}>
+      remove from the basket
+      </button>
+    </div>
       </header>
     </div>
   );
 }
 
 export default App;
+
+
