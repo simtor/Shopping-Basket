@@ -20,7 +20,7 @@ function Main() {
         Products
         </p>
         <div className="cart-button">
-          <button>{count}</button>
+          <button onClick={()=>{handleLink("/cart")}}>{count}</button>
         </div>
         <div>
       <button onClick={() => setCount(count + 1)}>
@@ -32,11 +32,11 @@ function Main() {
       remove from the basket
       </button>
     </div>
-    <div>
+    {/* <div>
       <button onClick={()=>{handleLink("/cart")}}>
         SELECT
       </button>
-    </div>
+    </div> */}
       </header>
     </div>
   );
