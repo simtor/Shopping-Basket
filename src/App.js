@@ -8,6 +8,7 @@ function App() {
   const [count, setCount] = useState(0);
   if (count === -1){
     alert('The Basket is empty')
+    setCount(count + 1);
   }
   return (
     <div className="App">
@@ -15,7 +16,7 @@ function App() {
         <p>
         Products
         </p>
-        <div>
+        <div className="cart">
           <p>{count}</p>
         </div>
         <div>

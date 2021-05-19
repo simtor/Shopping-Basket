@@ -22,6 +22,18 @@
   color: white;
 }
 
+.cart {
+  background-color: #42d680;
+  position: absolute;
+  top: 0px;
+  right: 500px;
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color:black;
+}
+
 .App-link {
   color: #61dafb;
 }
