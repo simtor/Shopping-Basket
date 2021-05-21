@@ -13,7 +13,7 @@ function Main() {
     window.location.href = nav;
     console.log('The link was clicked.')
   }
-  let totalAmount = (count*5.99);
+  let totalAmount = (count*5.99).toFixed(2);;
   console.log(totalAmount)
 
   return (
@@ -23,7 +23,7 @@ function Main() {
         Products
         </p>
         <div className="cart-button">
-          <button onClick={()=>{handleLink("/cart")}}>{count} {totalAmount}</button>
+          <button onClick={()=>{handleLink("/cart")}}>{count} £{totalAmount}</button>
         </div>
         <div>
       <button onClick={() => setCount(count + 1)}>
